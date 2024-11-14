@@ -6,6 +6,12 @@ body {
     background-color: #f0f0f0;
 }
 
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
 header {
     background-color: #00203F;
     color: white;
