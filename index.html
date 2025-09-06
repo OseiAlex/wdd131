@@ -1,59 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131 - Dynamic Web Fundamentals - Alex King Osei Junior</title>
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Alex King Osei Junior, Introduction to Web Design and Development">
-    <meta name="author" content="Alex King Osei Junior">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
-    <script src="scripts/getdates.js" defer></script>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 131 – Dynamic Web Fundamentals – Alex King Osei Junior">
+  <meta name="author" content="Alex King Osei Junior">
+  <title>WDD 131: Dynamic Web Fundamentals - Alex King Osei Junior</title>
+  <link rel="stylesheet" href="styles/base.css">
+  <script src="scripts/getdates.js" defer></script>
 </head>
 <body>
+  <header>
+    <span id="course-title">WDD 131: Dynamic Web Fundamentals - <span class="name-highlight">Alex King Osei Junior</span></span>
+    <nav>
+      <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+      <a href="https://byupw.instructure.com/" target="_blank">Canvas</a>
+      <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+      <a href="#">Final Project</a>
+    </nav>
+  </header>
 
-    <!-- Header Section -->
-    <header>
-        <h1>WDD 131: Dynamic Web Fundamentals - Alex King Osei Junior</h1>
-        <nav>
-            <a href="https://www.linkedin.com/in/alex-osei-9a111a1b2/">LinkedIn</a>
-            <a href="https://byui.instructure.com/">I-Learn</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/10?lang=eng">Scripture</a>
-            <a href="#">Final Project</a>
-        </nav>
-    </header>
+  <main>
+    <section class="card">
+      <h2>About Me</h2>
+      <div class="flex-row">
+        <p>
+          My name is Alex King Osei Junior and I go by Alex. I was born in Ghana and live alone in Ghana.
+          I am currently working as an I.T. Manager at Ghana Health Service. I love to travel and I love to learn new things.
+        </p>
+        <img src="images/profile.jpg" alt="Rubia M. Francesco photo">
+      </div>
+      <hr>
+      <h3>Accra, Ghana</h3>
+      <div class="flex-row">
+        <img src="images/gha.png" alt="Official Flag of Ghana">
+        <p>
+          The Ghana flag features three equal horizontal bands of red (top), gold (middle), and green (bottom), with a central black five-pointed star in the gold stripe. The red symbolizes the blood of martyrs for independence, the gold represents mineral wealth, the green signifies the lush forests, and the black star symbolizes African emancipation and unity. The flag was designed by Theodosia Okoh and adopted at Ghana's independence in 1957.
+        </p>
+      </div>
+    </section>
 
-    <!-- Main Section -->
-    <main>
-        <section class="card">
-            <h2>About Me</h2>
-            <p><img src="images/profile.jpg" alt="My Photo"><br>Born in Ghana, Alex King Osei Junior, now resides with alone in Accra. He works as an I.T. Manager at a hospital. I treasure spending with work and church colleagues. I love travelling as well as playing video games.
-            </p><br>
-            <section class="card">
-                <p><img src="images/bom.jpg" alt="The Book of Mormon">My favorite scripture is 1 Nephi 10:17-19. And it came to pass after I, Nephi, having heard all the words of my father, concerning the things which he saw in a vision, and also the things which he spake by the power of the Holy Ghost, which power he received by faith on the Son of God—and the Son of God was the Messiah who should come—I, Nephi, was desirous also that I might see, and hear, and know of these things, by the power of the Holy Ghost, which is the gift of God unto all those who diligently seek him, as well in times of old as in the time that he should manifest himself unto the children of men.</p>  
-            </section>
-        </section>
-        <section class="card">
-            <h2>Web Development Resources</h2>
-            <ul>
-                <li><a href="#">Dev.to Community</a></li>
-                <li><a href="#">Smashing Magazine</a></li>
-                <li><a href="#">CSS Tricks</a></li>
-                <li><a href="w3schools.com">W3Schools</a></li>
-                <li><a href="udemy.com">Udemy</a></li>
-            </ul>
-        </section>
-    </main>
+    <section class="card">
+      <h2>Web Dev Resources</h2>
+      <ul>
+        <li><a href="https://dev.to/" target="_blank">Dev.to Community</a></li>
+        <li><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></li>
+        <li><a href="https://css-tricks.com/" target="_blank">CSS Tricks</a></li>
+        <li><a href="https://www.w3schools.com/" target="_blank">W3 Schools</a></li>
+        <li><a href="https://www.udemy.com/" target="_blank">Udemy</a></li>
+        <li><a href="https://placeholder.com/" target="_blank">Image Placeholder</a></li>
+      </ul>
+    </section>
+  </main>
 
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; <span id="currentyear"></span> Alex King Osei Junior | Ghana</p>
-        <p id="lastModified"></p>
-    </footer>
-
+  <footer>
+    <p>&copy;<span id="currentyear"></span> 🌸 Alex King Osei Junior 🌸 Ghana</p>
+    <p id="lastModified"></p>
+  </footer>
 </body>
 </html>

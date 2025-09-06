@@ -1,69 +1,103 @@
-/* General Styling */
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* BODY */
 body {
-    /* font-family: 'Arial', sans-serif; */
-    margin: 0;
-    padding: 0;
-    background-color: #f0f0f0;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #000;
 }
 
-@media (max-width: 600px) {
-    main {
-        grid-template-columns: 1fr;
-    }
-}
-
+/* HEADER */
 header {
-    background-color: #00203F;
-    color: white;
-    padding: 10px;
-    text-align: center;
+  background: #0b3c61;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+#course-title {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.name-highlight {
+  color: #f4d03f; /* gold/yellow */
+}
+nav {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+}
+nav a:hover {
+  background: #555;
+  border-radius: 4px;
 }
 
-header nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-header nav a:hover {
-    text-decoration: underline;
-}
-
+/* MAIN LAYOUT */
 main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    padding: 20px;
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: white;
+  max-width: 1000px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding: 0 1rem;
 }
 
+/* CARDS */
 .card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.card h2 {
+  background: #1e4a73;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+}
+.card h3 {
+  text-align: center;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0.8rem;
+  gap: 1rem;
+}
+.flex-row img {
+  max-width: 150px;
+  height: auto;
+}
+.card ul {
+  list-style: disc;
+  padding: 1rem 2rem;
+}
+.card ul li a {
+  color: #0000ee;
+}
+.card ul li a:hover {
+  color: #1e4a73;
 }
 
-.card img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
+/* FOOTER */
 footer {
-    background-color: #00203F;
-    color: white;
-    text-align: center;
-    padding: 10px;
+  background: #0b3c61;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }
-
-footer p {
-    margin: 5px 0;
+footer p#lastModified {
+  color: #f4d03f;
 }
