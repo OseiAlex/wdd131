@@ -21,9 +21,9 @@ header {
   font-size: 1.4rem;
   font-weight: bold;
 }
-.name-highlight {
-  color: #f4d03f; /* gold/yellow */
-}
+/* .name-highlight {
+  color: #f4d03f; gold/yellow
+} */
 nav {
   background: #333;
   display: flex;
