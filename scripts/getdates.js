@@ -6,3 +6,4 @@ yearElement.textContent = currentYear;
 // Get last modified date and display in the footer
 const lastModifiedElement = document.getElementById('lastModified');
 lastModifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+//Best Codes
