@@ -28,7 +28,7 @@
   color: white;
   padding: 0.35rem 0.6rem;
   background: transparent;
-  transition: transform 160ms ease, background 160ms linear;
+  transition: transform 160ms ease, bg 160ms linear;
 }
 
 /* hover (visual) */
