@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Temple Album</title>
+
+  <meta name="author" content="Alex King Osei Junior">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts: change family names if you want different fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- mobile-first CSS -->
+  <link rel="stylesheet" href="styles/temples.css">
+
+  <!-- larger view overrides -->
+  <link rel="stylesheet" href="styles/temples-large.css" media="screen and (min-width: 800px)">
+
+  <!-- deferred script -->
+  <script defer src="scripts/temples.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <h2 class="site-title">Temple Album</h2>
+
+      <!-- hamburger button: visible only on small screens via CSS -->
+      <button id="hamburger" class="hamburger" aria-controls="main-nav" aria-expanded="false" aria-label="Open navigation menu">
+        ☰
+      </button>
+
+      <nav id="main-nav" class="main-nav" aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#" class="nav-link">Home</a></li>
+          <li><a href="#" class="nav-link">Old</a></li>
+          <li><a href="#" class="nav-link">New</a></li>
+          <li><a href="#" class="nav-link">Large</a></li>
+          <li><a href="#" class="nav-link">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Selected Temples</h1>
+
+    <!-- grid container for figure elements -->
+    <section class="gallery" aria-label="Temple gallery">
+      <!-- Example: 9 figures (use your own images) -->
+      <figure>
+        <img src="images/adelaide_australia_temple_lds.webp" alt="Adelaide Ausralia Temple">
+        <figcaption>Adelaide Ausralia Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/apia_samoa_temple_lds.webp" alt="Apia Samoa Temple">
+        <figcaption>Apia Samoa Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/bangkok_thailand_temple_exteriors.webp" alt="Bangkok Thailand Temple">
+        <figcaption>Bangkok Thailand Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/birmingham_alabama_temple_lds.webp" alt="Birmingham Alabama Temple">
+        <figcaption>Birmingham Alabama Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/buenos_aires_argentina_temple.webp" alt="Buenos Aires Argentina Temple">
+        <figcaption>Buenos Aires Argentina Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/caracas_venezuela_temple.webp" alt="Caracas Venezuela Temple">
+        <figcaption>Caracas Venezuela Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/concepcion_chile_temple.webp" alt="Concepcion Chile Temple">
+        <figcaption>Concepcion Chile Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/dallas_temple_lds.webp" alt="Dallas Temple">
+        <figcaption>Dallas Temple</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/ogden_utah_temple.webp" alt="Ogden Utah Temple">
+        <figcaption>Ogden Utah Temple</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="copyright-year"></span> <span class="owner">Alex King Osei Junior</span>.</p>
+      <p>Page last modified: <span id="last-modified"></span></p>
+      <p>Contact: <a href="mailto:oalexking@yahoo.com">oalexking@yahoo.com</a></p>
+    </div>
+  </footer>
+</body>
+</html>
