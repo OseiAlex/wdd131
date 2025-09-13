@@ -1,126 +1,177 @@
-/* Reset */
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Mobile-first default styles for Temple Album */
+/* Fonts provided by Google Fonts link in HTML */
+:root{
+  --bg: #f7f7fb;
+  --card: #ffffff;
+  --accent: #4b6cb7; /* tweak to your color scheme */
+  --accent-2: #182848;
+  --text: #222;
+  --muted: #666;
+  --max-width: 1100px;
+  --gap: 1rem;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.4;
 }
 
-header {
-    background-color: #4A148C;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    position: relative;
+/* header */
+.site-header{
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  color: white;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
 }
 
-
-/* Hamburger button for mobile */
-button#hamburger {
-    font-size: 30px;
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    display: block;
+.header-inner{
+  display:flex;
+  align-items:center;
+  gap: 1rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
-/* Navigation menu (hidden by default for mobile) */
-nav ul {
-    list-style: none;
-    display: none;  /* Hidden on mobile */
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    background-color: #4A148C;
-    padding: 0;
-    animation: slideDown 0.3s ease-out forwards;
+/* site title */
+.site-title{
+  margin:0;
+  font-family: "Playfair Display", serif;
+  font-weight:700;
+  letter-spacing:0.5px;
+  font-size:1.25rem;
+  flex: 1 1 auto;
 }
 
-/* Styling for menu items */
-nav li {
-    padding: 15px;
-    border-bottom: 1px solid white;
+/* hamburger - visible on mobile only (CSS will hide for larger screens) */
+.hamburger{
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.6rem;
+  line-height:1;
+  padding: 0.35rem 0.6rem;
+  display:block;
+  cursor:pointer;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    text-align: center;
-    display: block;
+/* navigation uses flex */
+.main-nav{
+  /* hidden by default on mobile; opened via .open on nav (JS toggles) */
+  display: none;
+  width:100%;
+  margin-top: 0.5rem;
 }
 
-/* Hamburger button disappears on larger screens */
-@media(min-width: 768px) {
-    button#hamburger {
-        display: none;
-    }
-
-    nav ul {
-        display: flex; /* Flex for horizontal navigation on larger screens */
-        flex-direction: row;
-        position: static;
-        justify-content: space-around;
-        width: 100%;
-    }
-
-    nav li {
-        border: none;
-    }
+/* nav list styles */
+.nav-list{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column; /* stack on mobile */
+  gap: 0.25rem;
 }
 
-/* Animation for dropdown */
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.nav-link{
+  display:block;
+  text-decoration:none;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight:600;
 }
 
-/* Main layout for mobile */
-main {
-    padding: 1rem;
+.nav-link:hover,
+.nav-link:focus{
+  background: rgba(255,255,255,0.1);
+  outline: none;
 }
 
-/* Image grid container */
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column for mobile */
-    gap: 1rem;
+/* When nav is open on mobile, show it as a card */
+.main-nav.open{
+  display:block;
+  background: rgba(255,255,255,0.04);
+  padding: 0.5rem;
+  border-radius: 8px;
 }
 
-figure {
-    margin: 0;
-    text-align: center;
+/* main content */
+main{
+  max-width: var(--max-width);
+  margin: 1rem auto;
+  padding: 0 1rem;
 }
 
-img {
-    width: 100%;
-    height: auto;
+/* heading */
+main h1{
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+  margin: 0 0 0.75rem 0;
 }
 
-footer {
-    background-color: #4A148C;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
+/* Gallery grid - mobile: single column */
+.gallery{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
 }
 
-/* Footer last modified */
-#lastModified {
-    font-weight: bold;
+/* figure card */
+figure{
+  margin:0;
+  background: var(--card);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(20,20,30,0.06);
 }
+
+figure img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+figcaption{
+  padding: 0.6rem 0.8rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* footer */
+.site-footer{
+  margin-top: 1.5rem;
+  background: #fff;
+  padding: 1rem;
+  border-top: 1px solid rgba(0,0,0,0.04);
+}
+
+.footer-inner{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+  color: var(--muted);
+  font-size:0.95rem;
+}
+
+/* utility: visually hidden (accessible labels if needed) */
+.visually-hidden{
+  position: absolute !important;
+  height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;
+}
+
+/* ensure links in footer visible and keyboard focusable */
+.site-footer a{color:var(--accent-2); text-decoration: none}
+.site-footer a:focus, .site-footer a:hover {text-decoration: underline}
+
+/* small screens: allow nav inline in header when open (keeps layout tidy) */
+@media (max-width: 420px) {
+  .header-inner{flex-wrap:wrap}
+}
+
+/* If JavaScript unavailable, show nav by default (progressive enhancement) */
+.no-js .main-nav { display:block; }

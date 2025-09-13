@@ -1,13 +1,83 @@
-@media(min-width: 768px) {
-    nav ul {
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    nav li {
-        display: inline;
-        padding: 0;
-        border-bottom: none;
-    }
+/* Larger-screen overrides (min-width: 800px) */
+/* This file is linked after temples.css and uses media="(min-width:800px)" */
+
+/* hide hamburger on large screens */
+.hamburger{
+  display:none;
 }
 
+/* move nav inline and visible */
+.header-inner{
+  gap: 2rem;
+}
+
+.main-nav{
+  display:block !important;
+  width: auto;
+  margin-top: 0;
+}
+
+.nav-list{
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* nav link style for larger view */
+.nav-link{
+  color: white;
+  padding: 0.35rem 0.6rem;
+  background: transparent;
+  transition: transform 160ms ease, background 160ms linear;
+}
+
+/* hover (visual) */
+.nav-link:hover,
+.nav-link:focus{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.08);
+}
+
+/* main width and grid changes */
+main{
+  padding: 2rem;
+}
+
+/* gallery: use grid with multiple columns */
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+/* figure style tweaks for large */
+figure{
+  display:flex;
+  flex-direction:column;
+  height: 100%;
+}
+
+figure img{
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+/* slightly larger captions on desktop */
+figcaption{
+  padding: 0.75rem 0.9rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* center header content */
+.site-header .header-inner{
+  align-items:center;
+}
+
+/* nicer footer layout on large screens */
+.site-footer .footer-inner{
+  display:flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items:center;
+}
