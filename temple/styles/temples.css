@@ -11,6 +11,12 @@
   --gap: 1rem;
 }
 
+@media (min-width: 800px){
+  main {max-width: 0px; /* give some breathing room */
+    margin: 0 auto;
+  }
+}
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
