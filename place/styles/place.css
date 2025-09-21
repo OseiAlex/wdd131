@@ -1,0 +1,85 @@
+:root {
+    --header-bg-color: #f00; /* Red for Ghana flag */
+    --header-text-color: #fff;
+    --data-bg-color: #ffc400; /* Yellow for Ghana flag */
+    --weather-bg-color: #008000; /* Green for Ghana flag */
+    --footer-bg-color: #f00; /* Red for consistency */
+    --text-color: #000; /* Black for text headings */
+    --font-family: 'Montserrat', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: #f7f4f0; /* Neutral background */
+    color: var(--text-color);
+    overflow-x: hidden;
+  }
+  
+  header {
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+  .hero img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    object-fit: cover;
+  }
+  
+  .data, .weather {
+    position: absolute;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: var(--text-color);
+    max-width: 300px;
+}
+  .data {
+    background-color: var(--data-bg-color);
+    color: var(--text-color);
+    padding: 1rem;
+    border-radius: 8px;
+    grid-area: data;
+    top: 19%;
+    left: 1%;
+  }
+  
+  .weather {
+    background-color: var(--weather-bg-color);
+    color: var(--header-text-color); /* White text for contrast */
+    padding: 1rem;
+    border-radius: 8px;
+    grid-area: weather;
+    bottom: -10%;
+    right: 1%;
+  }
+  
+  
+  .weather::before {
+    content: "⛅";
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+  
+  footer {
+    background-color: var(--footer-bg-color);
+    color: var(--header-text-color);
+    text-align: center;
+    padding: 1rem;
+  }

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accra | Ghana</title>
+        <meta name="description" content="Accra - Ghana, a place I live.">
+        <meta name="author" content="Alex King Osei Junior">
+        <link href="https://fonts.googleapis.com/css2?family=Bokor&family=Cormorant+Garamond&family=Edu+AU+VIC+WA+NT+Arrows&family=Edu+AU+VIC+WA+NT+Pre&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="place/styles/place-large.css">
+        <link rel="stylesheet" href="place/styles/place.css">
+        <script src="place/scripts/getdates.js" defer></script>
+        <script src="place/scripts/place.js" defer></script>
+     </head>
+<body>
+ <header>
+    <h1>Accra | Ghana</h1>
+ </header> 
+ <main>
+    <div class="hero">
+        <picture>
+          <source srcset="place/images/Accra-Ghana-large.webp" media="(min-width: 1000px)">
+          <source srcset="place/images/Accra-Ghana-medium.webp" media="(min-width: 500px)">
+          <img src="place/images/Accra-Ghana-small.webp" alt="Indipendence Square, Accra-Ghana" width="400" height="200">
+        </picture>
+    </div>
+
+      <!-- Data Section -->
+    <section class="data">
+        <h2>Data</h2>
+        <ul>
+          <li><strong>Area:</strong> 225.67 sq km</li>
+          <li><strong>Population:</strong> 2,603,000</li>
+          <li><strong>Capital:</strong> Accra</li>
+          <li><strong>Languages:</strong> English, Akan, Ga</li>
+          <li><strong>Currency:</strong> Ghanaian Cedi (GHS)</li>
+          <li><strong>Time Zone:</strong> GMT</li>
+          <li><strong>Calling Code:</strong> +233</li>
+          <li><strong>Internet TLD:</strong> .gh</li>
+        </ul>
+      </section>
+  
+      <!-- Weather Section -->
+      <section class="weather">
+        <h2>Weather</h2>
+        <p><strong>Temperature:</strong> 30°C</p>
+        <p><strong>Conditions:</strong> Partly Cloudy</p>
+        <p><strong>Wind:</strong> 15 km/h</p>
+        <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+      </section>
+ </main>
+ 
+ <footer>
+    <p>&copy;  <span id="currentyear"></span>🌻 Alex King Osei Junior 🌻 Ghana</p>
+        <p id="lastModified"></p>
+ </footer>
+</body>
+</html>

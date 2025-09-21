@@ -1,0 +1,72 @@
+/* Responsive Design */
+
+/* @media (max-width: 768px) {
+    .data, .weather {
+        max-width: 90%;
+        padding: 1rem;
+    }
+
+    .data {
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .weather {
+        bottom: 5%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+} */
+
+
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+    }
+
+    .hero {
+        position: static;
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+
+    .data, .weather {
+        position: static;
+        width: 90%;
+        max-width: none;
+        margin: 1rem auto;
+        text-align: center;
+        background: rgba(255, 255, 255, 1);
+    }
+
+    .data {
+        background-color: var(--data-bg-color);
+    }
+
+    .weather {
+        background-color: var(--weather-bg-color);
+        color: var(--header-text-color);
+    }
+
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+        background-color: var(--red);
+        color: var(--white);
+    }
+}
