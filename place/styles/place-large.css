@@ -52,7 +52,10 @@
         text-align: center;
         background: rgba(255, 255, 255, 1);
     }
-
+    h1::after {
+    content: " ✨";
+    color: goldenrod;
+    }
     .data {
         background-color: var(--data-bg-color);
     }
