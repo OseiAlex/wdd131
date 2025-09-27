@@ -1,0 +1,28 @@
+/* Large screen overrides */
+.hamburger {
+  display: none;
+}
+.main-nav {
+  display: block !important;
+}
+.nav-list {
+  flex-direction: row;
+  gap: 1rem;
+}
+.gallery {
+  grid-template-columns: repeat(3, 1fr);
+}
+.temple-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.temple-card img {
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+}
+.site-footer .footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
