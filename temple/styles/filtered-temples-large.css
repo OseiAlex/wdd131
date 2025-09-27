@@ -3,6 +3,9 @@
 
   .hamburger { display: none; }
 
+  .header-inner { justify-content: space-between; }
+  .main-nav { margin-left: auto; /* force nav flush right */}
+
   .main-nav { display: block !important; margin-top: 0; }
   .nav-list { flex-direction: row; gap: 0.5rem; align-items: center; }
 

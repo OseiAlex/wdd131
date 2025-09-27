@@ -31,11 +31,14 @@ body {
   gap: 1rem;
   max-width: var(--max-width);
   margin: 0 auto;
+  justify-content: space-between; /* ensures space between title and nav */
 }
+
 .site-title {
   font-family: "Playfair Display", serif;
   margin: 0;
   font-weight: 700;
+  flex-grow: 1;
   color: whitesmoke;
 }
 
