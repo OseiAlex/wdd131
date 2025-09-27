@@ -1,28 +1,21 @@
-/* Large screen overrides */
-.hamburger {
-  display: none;
-}
-.main-nav {
-  display: block !important;
-}
-.nav-list {
-  flex-direction: row;
-  gap: 1rem;
-}
-.gallery {
-  grid-template-columns: repeat(3, 1fr);
-}
-.temple-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.temple-card img {
-  object-fit: cover;
-  aspect-ratio: 16 / 10;
-}
-.site-footer .footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Larger-screen overrides (min-width: 800px) */
+@media (min-width: 800px) {
+
+  .hamburger { display: none; }
+
+  .main-nav { display: block !important; margin-top: 0; }
+  .nav-list { flex-direction: row; gap: 0.5rem; align-items: center; }
+
+  main { padding: 2rem; }
+  .gallery { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+
+  .temple-card { display: flex; flex-direction: column; justify-content: space-between; }
+  .temple-card img { aspect-ratio: 16 / 10; object-fit: cover; }
+
+  .site-footer .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    align-items: center;
+  }
 }

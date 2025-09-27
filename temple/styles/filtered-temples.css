@@ -10,9 +10,10 @@
 }
 
 * { box-sizing: border-box; }
+html,body { height: 100%; }
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
@@ -27,26 +28,30 @@ body {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 1rem;
   max-width: var(--max-width);
-  margin: auto;
+  margin: 0 auto;
 }
 .site-title {
   font-family: "Playfair Display", serif;
   margin: 0;
+  font-weight: 700;
   color: whitesmoke;
 }
 
-/* NAV */
+/* NAV & HAMBURGER */
 .hamburger {
   background: none;
   border: none;
   font-size: 1.6rem;
   color: white;
   cursor: pointer;
+  padding: 0.25rem 0.5rem;
 }
 .main-nav {
   display: none;
+  width: 100%;
+  margin-top: 0.5rem;
 }
 .main-nav.open {
   display: block;
@@ -57,15 +62,23 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  gap: 0.25rem;
 }
 .nav-link {
   color: white;
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.5rem 0.75rem;
   border-radius: 6px;
+  font-weight: 600;
+  outline: none;
 }
-.nav-link:hover {
+
+/* Visual hover & keyboard focus (improves accessibility) */
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:focus-visible {
   background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
 }
 
 /* MAIN */
@@ -77,10 +90,12 @@ main {
 h1 {
   font-family: "Playfair Display", serif;
   font-size: 1.8rem;
+  margin: 0 0 0.25rem 0;
 }
 h2 {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   color: var(--muted);
+  margin: 0 0 1rem 0;
 }
 
 /* GALLERY */
@@ -93,12 +108,22 @@ h2 {
   background: var(--card);
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.temple-card h3 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1.05rem;
+}
+.temple-card p {
+  margin: 0.25rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 .temple-card img {
   width: 100%;
   border-radius: 6px;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
+  display: block;
 }
 
 /* FOOTER */
@@ -112,5 +137,7 @@ h2 {
 }
 .footer-inner {
   max-width: var(--max-width);
-  margin: auto;
+  margin: 0 auto;
+  display: grid;
+  gap: 0.5rem;
 }
