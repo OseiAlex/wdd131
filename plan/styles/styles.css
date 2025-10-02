@@ -1,0 +1,136 @@
+/* css/styles.css
+   Simple, validator-friendly CSS. Uses the color schema & typography from the plan.
+*/
+
+/* Typography */
+:root{
+  --primary: #0b7a4a;   /* forest green */
+  --accent:  #f08a5d;   /* sun apricot */
+  --bg:      #f7f8fa;
+  --text:    #222222;
+  --muted:   #777777;
+  --radius:  8px;
+}
+
+html,body{
+  height:100%;
+  margin:0;
+  font-family: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height:1.45;
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{
+  max-width: 980px;
+  margin: 1.25rem auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.site-header{
+  background-color: white;
+  border-bottom: 1px solid #e6eaec;
+  padding: 0.75rem 1rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.brand{
+  display:flex;
+  gap:0.75rem;
+  align-items:center;
+}
+
+.logo{
+  width:48px;
+  height:48px;
+}
+
+#site-name{
+  margin:0;
+  font-family: "Merriweather", Georgia, serif;
+  color: var(--primary);
+  font-size:1.25rem;
+  line-height:1;
+}
+
+.tagline{
+  margin:0;
+  font-size:0.85rem;
+  color:var(--muted);
+}
+
+/* Sections */
+section{
+  background:#fff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+}
+
+h2{
+  margin-top:0;
+  font-family: "Merriweather", Georgia, serif;
+  color:var(--primary);
+}
+
+h3{
+  font-family: "Merriweather", Georgia, serif;
+  margin-bottom:0.5rem;
+}
+
+/* Wireframes */
+.wireframe-block{
+  margin: 0.5rem 0;
+}
+
+.wireframe{
+  width:100%;
+  height:auto;
+  border-radius:8px;
+  background: #fff;
+  display:block;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+/* Button */
+.btn{
+  display:inline-block;
+  margin-top:0.75rem;
+  padding:0.5rem 0.9rem;
+  border-radius:6px;
+  border:0;
+  background:var(--primary);
+  color:white;
+  font-weight:500;
+  cursor:pointer;
+}
+
+.btn:focus{
+  outline:3px solid rgba(11,122,74,0.18);
+  outline-offset:2px;
+}
+
+/* Footer */
+.site-footer{
+  text-align:center;
+  font-size:0.85rem;
+  color:var(--muted);
+  padding:1rem 0;
+}
+
+/* Responsive helpers: mobile-first */
+@media (min-width: 800px){
+  .container{ max-width:1200px; }
+}
+
+/* Highlight state toggled by JS */
+.wireframe .highlight rect,
+.wireframe .highlight text{
+  stroke: var(--accent);
+  fill-opacity: 0.95;
+}

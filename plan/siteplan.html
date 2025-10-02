@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GreenTrail — Site Plan</title>
+  <!-- Typography: Roboto (body) and Merriweather (headings) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="plan/styles/styles.css">
+  <script src="plan/scripts/main.js" defer></script>
+  <meta name="description" content="Site plan document for the GreenTrail project: a community hiking trail guide with resources, events, and membership." />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="images/logo.svg" alt="GreenTrail logo" class="logo" width="64" height="64">
+      <div>
+        <h1 id="site-name">GreenTrail</h1>
+        <p class="tagline">Community hiking trails — maps, events, and trail tips</p>
+      </div>
+    </div>
+    <div class="meta">
+      <p id="date-display" aria-live="polite"></p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="naming-conventions">
+      <h2>Naming Conventions</h2>
+      <p>All files and folders follow course naming conventions and are included in this project folder. Example: <code>project/siteplan.html</code>, <code>project/css/styles.css</code>, <code>project/js/main.js</code>, <code>project/images/logo.svg</code>.</p>
+    </section>
+
+    <section id="html-validation">
+      <h2>HTML Validation</h2>
+      <p>This document uses semantic HTML and follows W3C validator rules. The document has been written to avoid common validation errors (proper doctype, <code>lang</code>, required meta charset, alt text for images, etc.).</p>
+    </section>
+
+    <section id="css-validation">
+      <h2>CSS Validation</h2>
+      <p>Styles are in <code>css/styles.css</code> and follow W3C CSS validator best practices.</p>
+    </section>
+
+    <section id="site-name-purpose">
+      <h2>Site Name</h2>
+      <p><strong>Site name:</strong> <em>GreenTrail</em></p>
+      <p><strong>Reason:</strong> The name emphasizes ecological, outdoor trail experiences and community — it is short, brandable, and descriptive of the project's focus on hiking trails and nature.</p>
+
+      <h2>Site Purpose</h2>
+      <ul>
+        <li>Provide curated trail maps and difficulty ratings for local hiking routes.</li>
+        <li>Share event listings (guided walks, cleanups) and allow users to sign up for membership/newsletters.</li>
+        <li>Offer trail guides, safety tips, and gear recommendations.</li>
+      </ul>
+    </section>
+
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+      <ol>
+        <li><strong>New hiker:</strong> "Which trails are beginner-friendly and dog-friendly within 20 km of my location?"</li>
+        <li><strong>Event attendee:</strong> "How do I register for the next guided night hike and where is the meeting point?"</li>
+      </ol>
+    </section>
+
+    <section id="color-schema">
+      <h2>Color Schema</h2>
+      <p>At least two colors are defined and used in this document:</p>
+      <ul>
+        <li><strong>Primary (Forest Green):</strong> <code>#0b7a4a</code> — used for headings, primary buttons, and accents.</li>
+        <li><strong>Accent (Sun Apricot):</strong> <code>#f08a5d</code> — used for call-to-action highlights and links.</li>
+        <li><strong>Neutral (Background):</strong> <code>#f7f8fa</code> — page background; and text color <code>#222222</code>.</li>
+      </ul>
+      <p>The colors above are actively used in the stylesheet below to style headings, buttons, and backgrounds.</p>
+    </section>
+
+    <section id="typography">
+      <h2>Typography</h2>
+      <ul>
+        <li><strong>Heading font:</strong> Merriweather (serif) — used for all major headings (<code>h1, h2</code>).</li>
+        <li><strong>Body font:</strong> Roboto (sans-serif) — used for paragraphs, lists, and UI text.</li>
+      </ul>
+      <p>The fonts are loaded from Google Fonts and used site-wide via the stylesheet.</p>
+    </section>
+
+    <section id="wireframes">
+      <h2>Wireframes</h2>
+      <p>Two wireframe sketches for the home page are embedded below — <em>mobile</em> and <em>desktop</em> views.</p>
+
+      <div class="wireframe-block">
+        <h3>Mobile Wireframe (approx. 375×800)</h3>
+        <!-- Mobile wireframe SVG -->
+        <svg class="wireframe" viewBox="0 0 375 800" role="img" aria-label="Mobile wireframe">
+          <rect x="8" y="8" width="359" height="784" rx="12" ry="12" fill="#fff" stroke="#ccc" />
+          <rect x="20" y="24" width="120" height="40" rx="6" fill="#e9f7ef" stroke="#0b7a4a"/>
+          <text x="32" y="50" font-size="10" font-family="Roboto, sans-serif" fill="#0b7a4a">Logo / Site name</text>
+
+          <rect x="20" y="76" width="335" height="24" rx="4" fill="#faf0eb" stroke="#f08a5d"/>
+          <text x="28" y="92" font-size="10" fill="#222">Search / trail filter</text>
+
+          <rect x="20" y="110" width="335" height="180" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+          <text x="28" y="128" font-size="11" fill="#777">Hero image / featured trail</text>
+
+          <rect x="20" y="302" width="335" height="40" rx="6" fill="#fff" stroke="#ddd"/>
+          <text x="28" y="327" font-size="11" fill="#222">Trail list item (image | title | rating)</text>
+
+          <rect x="20" y="352" width="335" height="200" rx="6" fill="#fff" stroke="#ddd"/>
+          <text x="28" y="370" font-size="11" fill="#222">More trails (scrolling list)</text>
+
+          <rect x="20" y="566" width="335" height="100" rx="6" fill="#eaf6ff" stroke="#0b7a4a"/>
+          <text x="28" y="590" font-size="11" fill="#0b7a4a">Call to action: Join / Sign Up</text>
+
+          <rect x="0" y="740" width="375" height="60" fill="#fff"/>
+          <text x="28" y="776" font-size="11" fill="#777">Bottom nav: Home | Map | Events | Profile</text>
+        </svg>
+      </div>
+
+      <div class="wireframe-block">
+        <h3>Desktop Wireframe (approx. 1200×700)</h3>
+        <!-- Desktop wireframe SVG -->
+        <svg class="wireframe" viewBox="0 0 1200 700" role="img" aria-label="Desktop wireframe">
+          <rect x="8" y="8" width="1184" height="684" rx="6" fill="#fff" stroke="#ccc"/>
+          <rect x="24" y="24" width="300" height="60" rx="6" fill="#e9f7ef" stroke="#0b7a4a"/>
+          <text x="40" y="60" font-size="14" fill="#0b7a4a">Logo / GreenTrail</text>
+
+          <rect x="340" y="24" width="820" height="60" rx="6" fill="#faf0eb" stroke="#f08a5d"/>
+          <text x="356" y="60" font-size="12" fill="#222">Top search + filters</text>
+
+          <rect x="24" y="100" width="520" height="420" rx="6" fill="#f5f5f5" stroke="#ddd"/>
+          <text x="40" y="130" font-size="13" fill="#777">Main content: Featured trails (carousel)</text>
+
+          <rect x="560" y="100" width="600" height="420" rx="6" fill="#fff" stroke="#ddd"/>
+          <text x="576" y="130" font-size="13" fill="#222">Side panel: Map or interactive map</text>
+
+          <rect x="24" y="540" width="1136" height="120" rx="6" fill="#eaf6ff" stroke="#0b7a4a"/>
+          <text x="40" y="580" font-size="13" fill="#0b7a4a">Events strip / newsletter call-to-action</text>
+        </svg>
+      </div>
+
+      <p class="wireframe-note">Wireframes are conceptual layouts — placeholders represent images, content blocks and navigation.</p>
+
+      <button id="toggle-wireframes" class="btn">Toggle Wireframe Highlights</button>
+    </section>
+
+    <section id="accessibility">
+      <h2>Accessibility & Usability Notes</h2>
+      <ul>
+        <li>All images include <code>alt</code> text.</li>
+        <li>Color contrast will be checked; headings use semantic tags and link focus is visible.</li>
+        <li>Responsiveness: mobile-first styles will be used in CSS with media queries for larger viewports.</li>
+      </ul>
+    </section>
+
+    <section id="files-and-css">
+      <h2>Files & CSS</h2>
+      <p>Primary CSS file: <code>css/styles.css</code>. Primary JS file: <code>js/main.js</code>.</p>
+      <p>Example of UI behaviors included: a live date display and wireframe highlight toggler (in <code>js/main.js</code>).</p>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>GreenTrail site plan — created for W05 Project • <a href="#" id="view-source">View source</a></p>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
