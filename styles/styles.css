@@ -6,6 +6,10 @@
   --radius: 8px;
 }
 
+a{
+  color: var(--card);
+  text-decoration: none;
+}
 body {
   font-family: Arial, sans-serif;
   background: var(--bg);
