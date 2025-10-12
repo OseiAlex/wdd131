@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Final Project for WDD 131 - Travel Explorer">
@@ -15,7 +14,7 @@
   <script src="scripts/main.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#destinations">Skip to destinations</a>
+  <!-- <a class="skip-link" href="#main">Skip to main content</a> -->
   <header class="site-header" role="banner">
   <div class="brand">
     <img src="images/logo.jpeg" alt="Travel Explorer logo" class="logo" loading="lazy">
@@ -24,7 +23,6 @@
       <p class="tagline">Find your next adventure</p>
     </div>
   </div>
-
   <nav class="main-nav" role="navigation" aria-label="Main navigation">
     <ul>
       <li><a href="index.html" aria-current="page">Home</a></li>
@@ -33,23 +31,22 @@
     </ul>
   </nav>
 </header>
-
-  <main id="destinations" class="container" role="main">
-    <section class="controls" aria-label="Search and filters">
-      <label for="searchBox">Search destinations:</label>
-      <input id="searchBox" type="search" placeholder="e.g. beach, city" aria-label="Search destinations">
-      <label for="regionFilter">Region:</label>
-      <select id="regionFilter" aria-label="Filter by region">
-        <option value="">All</option>
-        <option value="Tropical">Tropical</option>
-        <option value="Highlands">Highlands</option>
-        <option value="Urban">Urban</option>
-        <option value="Nature">Nature</option>
-      </select>
-    </section>
-
-    <section id="destinationsList" class="grid" aria-live="polite">
-      <!-- JavaScript will render items here -->
+<section class="hero">
+  <img src="images/hero.jpg" alt="A scenic view of mountains and ocean at sunrise" class="hero-image" loading="lazy">
+  <div class="hero-content">
+    <h2>Discover Beautiful Destinations</h2>
+    <p>Explore top travel spots across the world and plan your next adventure today.</p>
+    <a class="btn" href="destinations.html" id="exploreBtn">Explore Now</a>
+  </div>
+</section>
+  <main id="main" class="container" role="main">
+    <section class="features" aria-labelledby="features-heading">
+      <h3 id="features-heading">What you can do</h3>
+      <ul>
+        <li>Search and filter destinations</li>
+        <li>Save favorites (stored in localStorage)</li>
+        <li>Submit messages through an accessible contact form</li>
+      </ul>
     </section>
   </main>
 
@@ -57,5 +54,7 @@
     <p>&copy; <span id="currentyear"></span> Travel Explorer.</p>
     <p id="lastModified"></p>
   </footer>
+
+  
 </body>
 </html>

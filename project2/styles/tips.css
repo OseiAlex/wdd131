@@ -1,0 +1,145 @@
+/* General Page Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #00274D;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: gold;
+}
+
+/* Travel Tips Page Title */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Tips Section */
+.tips-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Individual Tip Cards */
+.tip-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tip-card:hover {
+    transform: scale(1.02);
+}
+
+/* Tip Card Images */
+.tip-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+    border: 3px solid #00274D;
+}
+
+.tip-content {
+    flex: 1;
+}
+
+/* Tip Titles */
+.tip-card h2 {
+    font-size: 20px;
+    margin: 5px 0;
+    color: #00274D;
+}
+
+/* Tip Descriptions */
+.tip-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Footer */
+/* Footer */
+footer {
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    background-color: #00274D;
+    color: white;
+    margin-top: 20px;
+}
+
+  
+  footer p {
+    margin: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  footer .sociallinks {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  footer .sociallinks img {
+    width: 24px;
+    margin: 0 5px;
+    background-color: #d6d6d6;
+  }
+
+  a {
+    text-decoration: none;
+    color: gold;
+  }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tip-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tip-card img {
+        width: 100%;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+}

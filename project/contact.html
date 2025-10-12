@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="description" content="Final Project for WDD 131 - Travel Explorer">
@@ -15,7 +14,7 @@
   <script src="scripts/main.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#destinations">Skip to destinations</a>
+  <a class="skip-link" href="#contactForm">Skip to contact form</a>
   <header class="site-header" role="banner">
   <div class="brand">
     <img src="images/logo.jpeg" alt="Travel Explorer logo" class="logo" loading="lazy">
@@ -34,23 +33,35 @@
   </nav>
 </header>
 
-  <main id="destinations" class="container" role="main">
-    <section class="controls" aria-label="Search and filters">
-      <label for="searchBox">Search destinations:</label>
-      <input id="searchBox" type="search" placeholder="e.g. beach, city" aria-label="Search destinations">
-      <label for="regionFilter">Region:</label>
-      <select id="regionFilter" aria-label="Filter by region">
-        <option value="">All</option>
-        <option value="Tropical">Tropical</option>
-        <option value="Highlands">Highlands</option>
-        <option value="Urban">Urban</option>
-        <option value="Nature">Nature</option>
-      </select>
-    </section>
+  <main class="container" id="main" role="main">
+    <h2>Contact Us</h2>
+    <form id="contactForm" novalidate aria-describedby="formNote">
+      <p id="formNote">Your messages and feedbacks are dear to us</p>
 
-    <section id="destinationsList" class="grid" aria-live="polite">
-      <!-- JavaScript will render items here -->
-    </section>
+      <label for="name">Full name</label>
+      <input id="name" name="name" type="text" required minlength="2" aria-required="true">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" required aria-required="true">
+
+      <label for="subject">Subject</label>
+      <input id="subject" name="subject" type="text" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <fieldset>
+        <legend>Subscribe</legend>
+        <label><input type="checkbox" id="subscribe" name="subscribe"> Subscribe to our newsletter</label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" id="submitBtn">Submit</button>
+        <button type="button" id="clearStorageBtn">Clear Saved Messages</button>
+      </div>
+
+      <div id="formStatus" role="status" aria-live="polite"></div>
+    </form>
   </main>
 
   <footer role="contentinfo">

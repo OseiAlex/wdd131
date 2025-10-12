@@ -1,0 +1,23 @@
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+#destinationsList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.destination img {
+  transition: transform 0.3s;
+}
+
+.destination img:hover {
+  transform: scale(1.05);
+}
